@@ -7,10 +7,10 @@ using NzbDrone.Core.Download.Pending;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Core.Queue;
 using NzbDrone.SignalR;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Queue
+namespace Speakarr.Api.V1.Queue
 {
     [V1ApiController("queue/details")]
     public class QueueDetailsController : RestControllerWithSignalR<QueueResource, NzbDrone.Core.Queue.Queue>,

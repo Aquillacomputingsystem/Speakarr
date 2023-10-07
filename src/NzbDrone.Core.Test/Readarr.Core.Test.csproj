@@ -9,8 +9,8 @@
     <PackageReference Include="AutoFixture" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Test.Common\Readarr.Test.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Core\Readarr.Core.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Speakarr.Test.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Speakarr.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Logo\1024.png">

@@ -1,6 +1,6 @@
 using NzbDrone.Core.Organizer;
 
-namespace Readarr.Api.V1.Config
+namespace Speakarr.Api.V1.Config
 {
     public class NamingExampleResource
     {

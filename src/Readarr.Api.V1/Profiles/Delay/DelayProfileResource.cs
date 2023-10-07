@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Profiles.Delay;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Profiles.Delay
+namespace Speakarr.Api.V1.Profiles.Delay
 {
     public class DelayProfileResource : RestResource
     {

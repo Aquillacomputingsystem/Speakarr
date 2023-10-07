@@ -247,7 +247,7 @@ class CutoffUnmet extends Component {
                         Are you sure you want to search for all {totalRecords} Cutoff Unmet books?
                       </div>
                       <div>
-                        This cannot be cancelled once started without restarting Readarr.
+                        This cannot be cancelled once started without restarting Speakarr.
                       </div>
                     </div>
                   }

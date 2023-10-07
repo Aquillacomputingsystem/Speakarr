@@ -2,9 +2,9 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Disk;
 using NzbDrone.Core.MediaFiles;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.FileSystem
+namespace Speakarr.Api.V1.FileSystem
 {
     [V1ApiController]
     public class FileSystemController : Controller

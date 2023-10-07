@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Profiles.Releases;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Profiles.Release
+namespace Speakarr.Api.V1.Profiles.Release
 {
     public class ReleaseProfileResource : RestResource
     {

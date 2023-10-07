@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc.Routing;
 
-namespace Readarr.Http
+namespace Speakarr.Http
 {
     public class VersionedFeedControllerAttribute : Attribute, IRouteTemplateProvider
     {

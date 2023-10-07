@@ -45,7 +45,7 @@ function ErrorBoundaryError(props: ErrorBoundaryErrorProps) {
       <div className={styles.imageContainer}>
         <img
           className={styles.image}
-          src={`${window.Readarr.urlBase}/Content/Images/error.png`}
+          src={`${window.Speakarr.urlBase}/Content/Images/error.png`}
         />
       </div>
 
@@ -66,7 +66,7 @@ function ErrorBoundaryError(props: ErrorBoundaryErrorProps) {
 
         {
           <div className={styles.version}>
-            Version: {window.Readarr.version}
+            Version: {window.Speakarr.version}
           </div>
         }
       </details>

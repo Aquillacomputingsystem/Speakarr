@@ -1,6 +1,6 @@
 using System;
 
-namespace Readarr.Http.ClientSchema
+namespace Speakarr.Http.ClientSchema
 {
     public class FieldMapping
     {

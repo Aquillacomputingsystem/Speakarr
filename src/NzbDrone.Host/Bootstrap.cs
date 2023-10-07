@@ -36,18 +36,18 @@ namespace NzbDrone.Host
 
         public static readonly List<string> ASSEMBLIES = new List<string>
         {
-            "Readarr.Host",
-            "Readarr.Core",
-            "Readarr.SignalR",
-            "Readarr.Api.V1",
-            "Readarr.Http"
+            "Speakarr.Host",
+            "Speakarr.Core",
+            "Speakarr.SignalR",
+            "Speakarr.Api.V1",
+            "Speakarr.Http"
         };
 
         public static void Start(string[] args, Action<IHostBuilder> trayCallback = null)
         {
             try
             {
-                Logger.Info("Starting Readarr - {0} - Version {1}",
+                Logger.Info("Starting Speakarr - {0} - Version {1}",
                             Environment.ProcessPath,
                             Assembly.GetExecutingAssembly().GetName().Version);
 
@@ -99,7 +99,7 @@ namespace NzbDrone.Host
                             })
                             .ConfigureServices(services =>
                             {
-                                services.Configure<PostgresOptions>(config.GetSection("Readarr:Postgres"));
+                                services.Configure<PostgresOptions>(config.GetSection("Speakarr:Postgres"));
                             }).Build();
 
                         break;
@@ -108,11 +108,11 @@ namespace NzbDrone.Host
             }
             catch (InvalidConfigFileException ex)
             {
-                throw new ReadarrStartupException(ex);
+                throw new SpeakarrStartupException(ex);
             }
             catch (AccessDeniedConfigFileException ex)
             {
-                throw new ReadarrStartupException(ex);
+                throw new SpeakarrStartupException(ex);
             }
             catch (TerminateApplicationException ex)
             {
@@ -132,7 +132,7 @@ namespace NzbDrone.Host
             var config = GetConfiguration(context);
 
             var bindAddress = config.GetValue(nameof(ConfigFileProvider.BindAddress), "*");
-            var port = config.GetValue(nameof(ConfigFileProvider.Port), 8787);
+            var port = config.GetValue(nameof(ConfigFileProvider.Port), 8788);
             var sslPort = config.GetValue(nameof(ConfigFileProvider.SslPort), 6868);
             var enableSsl = config.GetValue(nameof(ConfigFileProvider.EnableSsl), false);
             var sslCertPath = config.GetValue<string>(nameof(ConfigFileProvider.SslCertPath));
@@ -158,7 +158,7 @@ namespace NzbDrone.Host
                 })
                 .ConfigureServices(services =>
                 {
-                    services.Configure<PostgresOptions>(config.GetSection("Readarr:Postgres"));
+                    services.Configure<PostgresOptions>(config.GetSection("Speakarr:Postgres"));
                 })
                 .ConfigureWebHost(builder =>
                 {
@@ -243,7 +243,7 @@ namespace NzbDrone.Host
             {
                 Logger.Error(ex, ex.Message);
 
-                throw new InvalidConfigFileException($"{configPath} is corrupt or invalid. Please delete the config file and Readarr will recreate it.", ex);
+                throw new InvalidConfigFileException($"{configPath} is corrupt or invalid. Please delete the config file and Speakarr will recreate it.", ex);
             }
         }
 
@@ -264,11 +264,11 @@ namespace NzbDrone.Host
             {
                 if (ex.HResult == 0x2 || ex.HResult == 0x2006D080)
                 {
-                    throw new ReadarrStartupException(ex,
+                    throw new SpeakarrStartupException(ex,
                         $"The SSL certificate file {cert} does not exist");
                 }
 
-                throw new ReadarrStartupException(ex);
+                throw new SpeakarrStartupException(ex);
             }
 
             return certificate;

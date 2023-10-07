@@ -4,9 +4,9 @@ using System.Linq;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.Books.Calibre;
 using NzbDrone.Core.RootFolders;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.RootFolders
+namespace Speakarr.Api.V1.RootFolders
 {
     public class RootFolderResource : RestResource
     {

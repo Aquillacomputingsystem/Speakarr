@@ -6,10 +6,10 @@ using NzbDrone.Core.Datastore.Events;
 using NzbDrone.Core.Jobs;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.SignalR;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.System.Tasks
+namespace Speakarr.Api.V1.System.Tasks
 {
     [V1ApiController("system/task")]
     public class TaskController : RestControllerWithSignalR<TaskResource, ScheduledTask>, IHandle<CommandExecutedEvent>

@@ -3,15 +3,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Serializer;
-using Readarr.Http.Extensions;
+using Speakarr.Http.Extensions;
 
-namespace Readarr.Http.Middleware
+namespace Speakarr.Http.Middleware
 {
     public class StartingUpMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly IRuntimeInfo _runtimeInfo;
-        private static readonly string MESSAGE = "Readarr is starting up, please try again later";
+        private static readonly string MESSAGE = "Speakarr is starting up, please try again later";
 
         public StartingUpMiddleware(RequestDelegate next, IRuntimeInfo runtimeInfo)
         {

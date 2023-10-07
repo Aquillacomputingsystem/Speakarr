@@ -29,7 +29,7 @@ namespace NzbDrone.Common.Processes
                 return;
             }
 
-            var filename = Path.Combine(_appFolderInfo.AppDataFolder, "readarr.pid");
+            var filename = Path.Combine(_appFolderInfo.AppDataFolder, "speakarr.pid");
             try
             {
                 File.WriteAllText(filename, ProcessProvider.GetCurrentProcessId().ToString());
@@ -37,7 +37,7 @@ namespace NzbDrone.Common.Processes
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to write PID file {0}", filename);
-                throw new ReadarrStartupException(ex, "Unable to write PID file {0}", filename);
+                throw new SpeakarrStartupException(ex, "Unable to write PID file {0}", filename);
             }
         }
     }

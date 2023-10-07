@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Http.Authentication
+namespace Speakarr.Http.Authentication
 {
     public class ApiKeyAuthenticationOptions : AuthenticationSchemeOptions
     {

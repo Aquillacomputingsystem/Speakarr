@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NzbDrone.Core.Authentication;
 
-namespace Readarr.Http.Authentication
+namespace Speakarr.Http.Authentication
 {
     public class NoAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {

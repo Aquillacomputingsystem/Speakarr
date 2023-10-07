@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http.Validation;
+using Speakarr.Http.Validation;
 
-namespace Readarr.Http.REST
+namespace Speakarr.Http.REST
 {
     public abstract class RestController<TResource> : Controller
         where TResource : RestResource, new()

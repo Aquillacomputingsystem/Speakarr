@@ -1,4 +1,4 @@
-namespace Readarr.Http
+namespace Speakarr.Http
 {
     public class PagingResourceFilter
     {

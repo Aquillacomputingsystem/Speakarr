@@ -3,9 +3,9 @@ using System.Dynamic;
 using System.Linq;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.CustomFilters;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.CustomFilters
+namespace Speakarr.Api.V1.CustomFilters
 {
     public class CustomFilterResource : RestResource
     {

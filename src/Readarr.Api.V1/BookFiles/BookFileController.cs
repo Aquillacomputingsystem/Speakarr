@@ -12,12 +12,12 @@ using NzbDrone.Core.MediaFiles.Events;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 using BadRequestException = NzbDrone.Core.Exceptions.BadRequestException;
 using HttpStatusCode = System.Net.HttpStatusCode;
 
-namespace Readarr.Api.V1.BookFiles
+namespace Speakarr.Api.V1.BookFiles
 {
     [V1ApiController]
     public class BookFileController : RestControllerWithSignalR<BookFileResource, BookFile>,

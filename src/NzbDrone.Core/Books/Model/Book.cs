@@ -34,7 +34,7 @@ namespace NzbDrone.Core.Books
         public List<int> RelatedBooks { get; set; }
         public Ratings Ratings { get; set; }
 
-        // These are Readarr generated/config
+        // These are Speakarr generated/config
         public string CleanTitle { get; set; }
         public bool Monitored { get; set; }
         public bool AnyEditionOk { get; set; }

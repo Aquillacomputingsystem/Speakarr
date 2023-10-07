@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Localization
+namespace Speakarr.Api.V1.Localization
 {
     public class LocalizationResource : RestResource
     {

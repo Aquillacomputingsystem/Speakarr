@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 using NzbDrone.Core.Authentication;
 
-namespace Readarr.Http.Authentication
+namespace Speakarr.Http.Authentication
 {
     public static class AuthenticationBuilderExtensions
     {
@@ -29,7 +29,7 @@ namespace Readarr.Http.Authentication
                 .AddBasic(AuthenticationType.Basic.ToString())
                 .AddCookie(AuthenticationType.Forms.ToString(), options =>
                 {
-                    options.Cookie.Name = "ReadarrAuth";
+                    options.Cookie.Name = "SpeakarrAuth";
                     options.AccessDeniedPath = "/login?loginFailed=true";
                     options.LoginPath = "/login";
                     options.ExpireTimeSpan = TimeSpan.FromDays(7);

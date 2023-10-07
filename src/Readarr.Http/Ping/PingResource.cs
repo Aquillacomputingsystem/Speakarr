@@ -1,4 +1,4 @@
-namespace Readarr.Http.Ping
+namespace Speakarr.Http.Ping
 {
     public class PingResource
     {

@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.ImportLists.Exclusions;
 using NzbDrone.Core.Validation;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.ImportLists
+namespace Speakarr.Api.V1.ImportLists
 {
     [V1ApiController]
     public class ImportListExclusionController : RestController<ImportListExclusionResource>

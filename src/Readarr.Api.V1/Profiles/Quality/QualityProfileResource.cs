@@ -3,9 +3,9 @@ using System.Linq;
 using NzbDrone.Core.CustomFormats;
 using NzbDrone.Core.Profiles;
 using NzbDrone.Core.Profiles.Qualities;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Profiles.Quality
+namespace Speakarr.Api.V1.Profiles.Quality
 {
     public class QualityProfileResource : RestResource
     {

@@ -2,7 +2,7 @@
 using FluentValidation.Validators;
 using NzbDrone.Common.Extensions;
 
-namespace Readarr.Http.Validation
+namespace Speakarr.Http.Validation
 {
     public class EmptyCollectionValidator<T> : PropertyValidator
     {

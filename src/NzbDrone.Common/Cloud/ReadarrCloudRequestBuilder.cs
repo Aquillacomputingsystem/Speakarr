@@ -2,18 +2,18 @@ using NzbDrone.Common.Http;
 
 namespace NzbDrone.Common.Cloud
 {
-    public interface IReadarrCloudRequestBuilder
+    public interface ISpeakarrCloudRequestBuilder
     {
         IHttpRequestBuilderFactory Services { get; }
         IHttpRequestBuilderFactory Metadata { get; }
     }
 
-    public class ReadarrCloudRequestBuilder : IReadarrCloudRequestBuilder
+    public class SpeakarrCloudRequestBuilder : ISpeakarrCloudRequestBuilder
     {
-        public ReadarrCloudRequestBuilder()
+        public SpeakarrCloudRequestBuilder()
         {
             //TODO: Create Update Endpoint
-            Services = new HttpRequestBuilder("https://readarr.servarr.com/v1/")
+            Services = new HttpRequestBuilder("https://speakarr.servarr.com/v1/")
                 .CreateFactory();
 
             Metadata = new HttpRequestBuilder("https://api.bookinfo.club/v1/{route}")

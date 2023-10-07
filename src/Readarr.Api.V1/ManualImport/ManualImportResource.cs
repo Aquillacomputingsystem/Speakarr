@@ -4,11 +4,11 @@ using NzbDrone.Core.DecisionEngine;
 using NzbDrone.Core.MediaFiles.BookImport.Manual;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.Qualities;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http.REST;
+using Speakarr.Api.V1.Author;
+using Speakarr.Api.V1.Books;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.ManualImport
+namespace Speakarr.Api.V1.ManualImport
 {
     public class ManualImportResource : RestResource
     {

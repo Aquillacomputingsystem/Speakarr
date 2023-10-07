@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Readarr.Http.Frontend.Mappers
+namespace Speakarr.Http.Frontend.Mappers
 {
     public interface IMapHttpRequestsToDisk
     {

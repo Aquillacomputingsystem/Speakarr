@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Readarr.Api.V1.Books;
+using Speakarr.Api.V1.Books;
 using RestSharp;
 
 namespace NzbDrone.Integration.Test.Client

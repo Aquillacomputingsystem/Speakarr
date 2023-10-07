@@ -1,4 +1,4 @@
-﻿namespace Readarr.Http.Extensions
+﻿namespace Speakarr.Http.Extensions
 {
     public static class AccessControlHeaders
     {

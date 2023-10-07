@@ -5,9 +5,9 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.Books.Commands;
 using NzbDrone.Core.Messaging.Commands;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Author
+namespace Speakarr.Api.V1.Author
 {
     [V1ApiController("author/editor")]
     public class AuthorEditorController : Controller

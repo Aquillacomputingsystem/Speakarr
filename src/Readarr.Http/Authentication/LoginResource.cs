@@ -1,4 +1,4 @@
-namespace Readarr.Http.Authentication
+namespace Speakarr.Http.Authentication
 {
     public class LoginResource
     {

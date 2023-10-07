@@ -8,15 +8,15 @@ using NLog;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Exceptions;
-using Readarr.Http.Exceptions;
+using Speakarr.Http.Exceptions;
 
-namespace Readarr.Http.ErrorManagement
+namespace Speakarr.Http.ErrorManagement
 {
-    public class ReadarrErrorPipeline
+    public class SpeakarrErrorPipeline
     {
         private readonly Logger _logger;
 
-        public ReadarrErrorPipeline(Logger logger)
+        public SpeakarrErrorPipeline(Logger logger)
         {
             _logger = logger;
         }

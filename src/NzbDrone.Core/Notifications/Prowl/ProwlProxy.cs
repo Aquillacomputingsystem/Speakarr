@@ -62,7 +62,7 @@ namespace NzbDrone.Core.Notifications.Prowl
             try
             {
                 const string title = "Test Notification";
-                const string body = "This is a test message from Readarr";
+                const string body = "This is a test message from Speakarr";
 
                 SendNotification(title, body, settings);
             }

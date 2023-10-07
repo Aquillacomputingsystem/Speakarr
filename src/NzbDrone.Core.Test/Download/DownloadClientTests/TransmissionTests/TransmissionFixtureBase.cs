@@ -114,12 +114,12 @@ namespace NzbDrone.Core.Test.Download.DownloadClientTests.TransmissionTests
 
         protected void GivenMusicCategory()
         {
-            _settings.MusicCategory = "Readarr";
+            _settings.MusicCategory = "Speakarr";
         }
 
         protected void GivenTvDirectory()
         {
-            _settings.TvDirectory = @"C:/Downloads/Finished/Readarr";
+            _settings.TvDirectory = @"C:/Downloads/Finished/Speakarr";
         }
 
         protected void GivenFailedDownload()

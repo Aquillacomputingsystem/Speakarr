@@ -1,9 +1,9 @@
 using NzbDrone.Core.ImportLists;
 using NzbDrone.Core.Validation;
 using NzbDrone.Core.Validation.Paths;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.ImportLists
+namespace Speakarr.Api.V1.ImportLists
 {
     [V1ApiController]
     public class ImportListController : ProviderControllerBase<ImportListResource, ImportListBulkResource, IImportList, ImportListDefinition>

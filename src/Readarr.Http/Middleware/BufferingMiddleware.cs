@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace Readarr.Http.Middleware
+namespace Speakarr.Http.Middleware
 {
     public class BufferingMiddleware
     {

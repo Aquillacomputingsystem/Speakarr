@@ -6,7 +6,7 @@ using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Analytics;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Http.Frontend
+namespace Speakarr.Http.Frontend
 {
     [Authorize(Policy = "UI")]
     [ApiController]

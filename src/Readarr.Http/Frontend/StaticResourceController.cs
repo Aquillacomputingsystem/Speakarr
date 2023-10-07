@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using NLog;
-using Readarr.Http.Extensions;
-using Readarr.Http.Frontend.Mappers;
+using Speakarr.Http.Extensions;
+using Speakarr.Http.Frontend.Mappers;
 
-namespace Readarr.Http.Frontend
+namespace Speakarr.Http.Frontend
 {
     [Authorize(Policy="UI")]
     [ApiController]

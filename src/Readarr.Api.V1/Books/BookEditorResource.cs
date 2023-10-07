@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Readarr.Api.V1.Books
+namespace Speakarr.Api.V1.Books
 {
     public class BookEditorResource
     {

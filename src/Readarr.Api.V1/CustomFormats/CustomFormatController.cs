@@ -7,10 +7,10 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.CustomFormats;
 using NzbDrone.Core.Validation;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.CustomFormats
+namespace Speakarr.Api.V1.CustomFormats
 {
     [V1ApiController]
     public class CustomFormatController : RestController<CustomFormatResource>

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Datastore;
 
-namespace Readarr.Http
+namespace Speakarr.Http
 {
     public class PagingResource<TResource>
     {

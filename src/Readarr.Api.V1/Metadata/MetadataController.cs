@@ -1,9 +1,9 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Extras.Metadata;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Metadata
+namespace Speakarr.Api.V1.Metadata
 {
     [V1ApiController]
     public class MetadataController : ProviderControllerBase<MetadataResource, MetadataBulkResource, IMetadata, MetadataDefinition>

@@ -3,7 +3,7 @@ using System.Linq;
 using NzbDrone.Common.Crypto;
 using NzbDrone.Common.Extensions;
 
-namespace Readarr.Http.Frontend.Mappers
+namespace Speakarr.Http.Frontend.Mappers
 {
     public interface ICacheBreakerProvider
     {

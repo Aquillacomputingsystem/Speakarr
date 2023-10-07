@@ -5,7 +5,7 @@ using NzbDrone.Core.Datastore.Events;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.SignalR;
 
-namespace Readarr.Http.REST
+namespace Speakarr.Http.REST
 {
     public abstract class RestControllerWithSignalR<TResource, TModel> : RestController<TResource>, IHandle<ModelEvent<TModel>>
         where TResource : RestResource, new()

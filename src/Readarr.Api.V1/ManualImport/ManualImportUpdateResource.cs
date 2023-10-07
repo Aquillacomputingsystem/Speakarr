@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using NzbDrone.Core.DecisionEngine;
 using NzbDrone.Core.Qualities;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.ManualImport
+namespace Speakarr.Api.V1.ManualImport
 {
     public class ManualImportUpdateResource : RestResource
     {

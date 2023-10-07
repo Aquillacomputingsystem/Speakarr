@@ -1,8 +1,8 @@
 using NzbDrone.Core.MediaFiles;
 using NzbDrone.Core.Parser.Model;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.BookFiles
+namespace Speakarr.Api.V1.BookFiles
 {
     public class MediaInfoResource : RestResource
     {

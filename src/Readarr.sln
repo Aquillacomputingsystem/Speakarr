@@ -15,51 +15,51 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{0F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{4EACDBBC-BCD7-4765-A57B-3E08331E4749}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Api.V1", "Readarr.Api.V1\Readarr.Api.V1.csproj", "{D1D48E1D-9EEB-470B-992C-3954F90FB014}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Api.V1", "Speakarr.Api.V1\Speakarr.Api.V1.csproj", "{D1D48E1D-9EEB-470B-992C-3954F90FB014}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Http", "Readarr.Http\Readarr.Http.csproj", "{F8A02FD4-A7A4-40D0-BB81-6319105A3302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Http", "Speakarr.Http\Speakarr.Http.csproj", "{F8A02FD4-A7A4-40D0-BB81-6319105A3302}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Api.Test", "NzbDrone.Api.Test\Readarr.Api.Test.csproj", "{E2EA47B1-6996-417D-A6EC-28C4F202715C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Api.Test", "NzbDrone.Api.Test\Speakarr.Api.Test.csproj", "{E2EA47B1-6996-417D-A6EC-28C4F202715C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Automation.Test", "NzbDrone.Automation.Test\Readarr.Automation.Test.csproj", "{2356C987-F992-4084-9DA2-5DAD1DA35E85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Automation.Test", "NzbDrone.Automation.Test\Speakarr.Automation.Test.csproj", "{2356C987-F992-4084-9DA2-5DAD1DA35E85}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Common.Test", "NzbDrone.Common.Test\Readarr.Common.Test.csproj", "{A628FEA4-75CC-4039-8823-27258C55D2BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Common.Test", "NzbDrone.Common.Test\Speakarr.Common.Test.csproj", "{A628FEA4-75CC-4039-8823-27258C55D2BF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Common", "NzbDrone.Common\Readarr.Common.csproj", "{74BF1D46-710C-42C1-82DD-34B42C58F843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Common", "NzbDrone.Common\Speakarr.Common.csproj", "{74BF1D46-710C-42C1-82DD-34B42C58F843}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Console", "NzbDrone.Console\Readarr.Console.csproj", "{AEA9EE9A-19BF-45CB-93D9-52CA443FD313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Console", "NzbDrone.Console\Speakarr.Console.csproj", "{AEA9EE9A-19BF-45CB-93D9-52CA443FD313}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Core.Test", "NzbDrone.Core.Test\Readarr.Core.Test.csproj", "{04ECC74F-C340-4987-863E-757FB62D27C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Core.Test", "NzbDrone.Core.Test\Speakarr.Core.Test.csproj", "{04ECC74F-C340-4987-863E-757FB62D27C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Core", "NzbDrone.Core\Readarr.Core.csproj", "{82EBE37B-E3A7-4365-9B06-FA647BCC7AF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Core", "NzbDrone.Core\Speakarr.Core.csproj", "{82EBE37B-E3A7-4365-9B06-FA647BCC7AF0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Host.Test", "NzbDrone.Host.Test\Readarr.Host.Test.csproj", "{6D4DE6D5-9594-4AE4-85E0-41C7FFCCED92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Host.Test", "NzbDrone.Host.Test\Speakarr.Host.Test.csproj", "{6D4DE6D5-9594-4AE4-85E0-41C7FFCCED92}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Host", "NzbDrone.Host\Readarr.Host.csproj", "{B6913970-FB88-4F6F-83F9-00728218E3FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Host", "NzbDrone.Host\Speakarr.Host.csproj", "{B6913970-FB88-4F6F-83F9-00728218E3FD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Integration.Test", "NzbDrone.Integration.Test\Readarr.Integration.Test.csproj", "{6D5618FB-45B9-44AE-BF99-8EF37519CB30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Integration.Test", "NzbDrone.Integration.Test\Speakarr.Integration.Test.csproj", "{6D5618FB-45B9-44AE-BF99-8EF37519CB30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Libraries.Test", "NzbDrone.Libraries.Test\Readarr.Libraries.Test.csproj", "{1969394D-3181-404F-8E2C-E3E71A5BAD30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Libraries.Test", "NzbDrone.Libraries.Test\Speakarr.Libraries.Test.csproj", "{1969394D-3181-404F-8E2C-E3E71A5BAD30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Mono.Test", "NzbDrone.Mono.Test\Readarr.Mono.Test.csproj", "{CCE9ABBC-96BA-425B-8140-DC8102290BE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Mono.Test", "NzbDrone.Mono.Test\Speakarr.Mono.Test.csproj", "{CCE9ABBC-96BA-425B-8140-DC8102290BE3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Mono", "NzbDrone.Mono\Readarr.Mono.csproj", "{504CD0A8-523B-4A0E-99BE-C179DECA9B76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Mono", "NzbDrone.Mono\Speakarr.Mono.csproj", "{504CD0A8-523B-4A0E-99BE-C179DECA9B76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.SignalR", "NzbDrone.SignalR\Readarr.SignalR.csproj", "{B30BE76E-4D20-47AA-9E03-E32613D888CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.SignalR", "NzbDrone.SignalR\Speakarr.SignalR.csproj", "{B30BE76E-4D20-47AA-9E03-E32613D888CC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Test.Common", "NzbDrone.Test.Common\Readarr.Test.Common.csproj", "{B8706292-5BE8-4099-94CA-F26DDD3757E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Test.Common", "NzbDrone.Test.Common\Speakarr.Test.Common.csproj", "{B8706292-5BE8-4099-94CA-F26DDD3757E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Test.Dummy", "NzbDrone.Test.Dummy\Readarr.Test.Dummy.csproj", "{AFA7F48E-DB81-4E39-843B-78715C6ADF0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Test.Dummy", "NzbDrone.Test.Dummy\Speakarr.Test.Dummy.csproj", "{AFA7F48E-DB81-4E39-843B-78715C6ADF0D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Update.Test", "NzbDrone.Update.Test\Readarr.Update.Test.csproj", "{A76441EE-AB2E-4E9D-8CD3-58BE5A8514D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Update.Test", "NzbDrone.Update.Test\Speakarr.Update.Test.csproj", "{A76441EE-AB2E-4E9D-8CD3-58BE5A8514D3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Update", "NzbDrone.Update\Readarr.Update.csproj", "{4FBA2CBC-B022-41D6-B6DA-3166991B9172}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Update", "NzbDrone.Update\Speakarr.Update.csproj", "{4FBA2CBC-B022-41D6-B6DA-3166991B9172}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Windows.Test", "NzbDrone.Windows.Test\Readarr.Windows.Test.csproj", "{7BEDCC1E-0763-4553-B32B-0430B334ACBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Windows.Test", "NzbDrone.Windows.Test\Speakarr.Windows.Test.csproj", "{7BEDCC1E-0763-4553-B32B-0430B334ACBB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr.Windows", "NzbDrone.Windows\Readarr.Windows.csproj", "{3F076242-A6FA-4657-8606-AF1D150367FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr.Windows", "NzbDrone.Windows\Speakarr.Windows.csproj", "{3F076242-A6FA-4657-8606-AF1D150367FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Readarr", "NzbDrone\Readarr.csproj", "{0DC43D36-6680-4237-BE39-D5D094DBCE29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Speakarr", "NzbDrone\Speakarr.csproj", "{0DC43D36-6680-4237-BE39-D5D094DBCE29}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceInstall", "ServiceHelpers\ServiceInstall\ServiceInstall.csproj", "{7DA231E8-A31D-4F53-8760-820861B6CE65}"
 EndProject

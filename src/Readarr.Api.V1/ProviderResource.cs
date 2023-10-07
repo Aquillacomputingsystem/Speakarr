@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using NzbDrone.Common.Reflection;
 using NzbDrone.Core.ThingiProvider;
-using Readarr.Http.ClientSchema;
-using Readarr.Http.REST;
+using Speakarr.Http.ClientSchema;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1
+namespace Speakarr.Api.V1
 {
     public class ProviderResource<T> : RestResource
     {
@@ -38,8 +38,8 @@ namespace Readarr.Api.V1
                 Tags = definition.Tags,
                 Fields = SchemaBuilder.ToSchema(definition.Settings),
 
-                //readarr/supported is an disambagation page. the # should be a header on the page with appropiate details/link
-                InfoLink = string.Format("https://wiki.servarr.com/readarr/supported#{0}",
+                //speakarr/supported is an disambagation page. the # should be a header on the page with appropiate details/link
+                InfoLink = string.Format("https://wiki.servarr.com/speakarr/supported#{0}",
                     definition.Implementation.ToLower())
             };
         }

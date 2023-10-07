@@ -18,9 +18,9 @@ using NzbDrone.Core.Validation;
 using NzbDrone.Core.Validation.Paths;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Books
+namespace Speakarr.Api.V1.Books
 {
     [V1ApiController]
     public class BookController : BookControllerWithSignalR,

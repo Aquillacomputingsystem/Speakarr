@@ -5,9 +5,9 @@ using System.Text.Json.Serialization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Core.Messaging.Commands;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Commands
+namespace Speakarr.Api.V1.Commands
 {
     public class CommandResource : RestResource
     {

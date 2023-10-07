@@ -1,6 +1,6 @@
 using NzbDrone.Core.Extras.Metadata;
 
-namespace Readarr.Api.V1.Metadata
+namespace Speakarr.Api.V1.Metadata
 {
     public class MetadataBulkResource : ProviderBulkResource<MetadataBulkResource>
     {

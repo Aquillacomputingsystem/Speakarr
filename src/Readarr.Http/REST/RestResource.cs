@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Readarr.Http.REST
+namespace Speakarr.Http.REST
 {
     public abstract class RestResource
     {

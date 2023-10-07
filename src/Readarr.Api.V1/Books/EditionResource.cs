@@ -4,9 +4,9 @@ using System.Linq;
 using Newtonsoft.Json;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.MediaCover;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Books
+namespace Speakarr.Api.V1.Books
 {
     public class EditionResource : RestResource
     {

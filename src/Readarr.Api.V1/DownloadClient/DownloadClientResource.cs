@@ -1,7 +1,7 @@
 ﻿using NzbDrone.Core.Download;
 using NzbDrone.Core.Indexers;
 
-namespace Readarr.Api.V1.DownloadClient
+namespace Speakarr.Api.V1.DownloadClient
 {
     public class DownloadClientResource : ProviderResource<DownloadClientResource>
     {

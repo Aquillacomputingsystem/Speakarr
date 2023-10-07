@@ -1,6 +1,6 @@
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Queue
+namespace Speakarr.Api.V1.Queue
 {
     public class QueueStatusResource : RestResource
     {

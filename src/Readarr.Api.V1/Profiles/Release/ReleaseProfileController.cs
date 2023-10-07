@@ -5,10 +5,10 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Profiles.Releases;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Profiles.Release
+namespace Speakarr.Api.V1.Profiles.Release
 {
     [V1ApiController]
     public class ReleaseProfileController : RestController<ReleaseProfileResource>

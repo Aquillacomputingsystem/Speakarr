@@ -9,7 +9,7 @@ using NzbDrone.Common.Reflection;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Annotations;
 
-namespace Readarr.Http.ClientSchema
+namespace Speakarr.Http.ClientSchema
 {
     public static class SchemaBuilder
     {

@@ -11,7 +11,7 @@ using Microsoft.Extensions.Options;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Authentication;
 
-namespace Readarr.Http.Authentication
+namespace Speakarr.Http.Authentication
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {

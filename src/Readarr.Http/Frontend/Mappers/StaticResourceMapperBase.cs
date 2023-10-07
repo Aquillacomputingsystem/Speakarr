@@ -8,7 +8,7 @@ using NLog;
 using NzbDrone.Common.Disk;
 using NzbDrone.Common.EnvironmentInfo;
 
-namespace Readarr.Http.Frontend.Mappers
+namespace Speakarr.Http.Frontend.Mappers
 {
     public abstract class StaticResourceMapperBase : IMapHttpRequestsToDisk
     {

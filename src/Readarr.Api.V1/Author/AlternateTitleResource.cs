@@ -1,4 +1,4 @@
-namespace Readarr.Api.V1.Author
+namespace Speakarr.Api.V1.Author
 {
     public class AlternateTitleResource
     {

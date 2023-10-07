@@ -3,9 +3,9 @@ using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Config
+namespace Speakarr.Api.V1.Config
 {
     [V1ApiController("config/ui")]
     public class UiConfigController : ConfigController<UiConfigResource>

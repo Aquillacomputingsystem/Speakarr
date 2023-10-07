@@ -1,5 +1,5 @@
 using NzbDrone.Core.Configuration;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
 namespace Prowlarr.Api.V1.Config
 {

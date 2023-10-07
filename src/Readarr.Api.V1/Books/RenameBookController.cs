@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.MediaFiles;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Books
+namespace Speakarr.Api.V1.Books
 {
     [V1ApiController("rename")]
     public class RenameBookController : Controller

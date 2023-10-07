@@ -3,12 +3,12 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>net6.0</TargetFrameworks>
 
-    <ApplicationIcon>..\NzbDrone.Host\Readarr.ico</ApplicationIcon>
+    <ApplicationIcon>..\NzbDrone.Host\Speakarr.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="!$(RuntimeIdentifier.StartsWith('win'))">
-    <AssemblyName>Readarr</AssemblyName>
+    <AssemblyName>Speakarr</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Host\Readarr.Host.csproj" />
+    <ProjectReference Include="..\NzbDrone.Host\Speakarr.Host.csproj" />
   </ItemGroup>
 </Project>

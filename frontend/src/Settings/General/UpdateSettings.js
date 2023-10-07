@@ -60,8 +60,8 @@ function UpdateSettings(props) {
         <FormInputGroup
           type={inputTypes.AUTO_COMPLETE}
           name="branch"
-          helpText={usingExternalUpdateMechanism ? translate('UsingExternalUpdateMechanismBranchUsedByExternalUpdateMechanism') : translate('UsingExternalUpdateMechanismBranchToUseToUpdateReadarr')}
-          helpLink="https://wiki.servarr.com/readarr/faq#how-do-I-update-my-readarr"
+          helpText={usingExternalUpdateMechanism ? translate('UsingExternalUpdateMechanismBranchUsedByExternalUpdateMechanism') : translate('UsingExternalUpdateMechanismBranchToUseToUpdateSpeakarr')}
+          helpLink="https://wiki.servarr.com/speakarr/faq#how-do-I-update-my-speakarr"
           {...branch}
           values={branchValues}
           onChange={onInputChange}
@@ -83,7 +83,7 @@ function UpdateSettings(props) {
                 type={inputTypes.CHECK}
                 name="updateAutomatically"
                 helpText={translate('UpdateAutomaticallyHelpText')}
-                helpTextWarning={updateMechanism.value === 'docker' ? translate('AutomaticUpdatesDisabledDocker', { appName: 'Readarr' }) : undefined}
+                helpTextWarning={updateMechanism.value === 'docker' ? translate('AutomaticUpdatesDisabledDocker', { appName: 'Speakarr' }) : undefined}
                 onChange={onInputChange}
                 {...updateAutomatically}
               />
@@ -100,7 +100,7 @@ function UpdateSettings(props) {
                 name="updateMechanism"
                 values={updateOptions}
                 helpText={translate('UpdateMechanismHelpText')}
-                helpLink="https://wiki.servarr.com/readarr/faq#how-do-i-update-my-readarr"
+                helpLink="https://wiki.servarr.com/speakarr/faq#how-do-i-update-my-speakarr"
                 onChange={onInputChange}
                 {...updateMechanism}
               />

@@ -1,7 +1,7 @@
 using NzbDrone.Core.Configuration;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Config
+namespace Speakarr.Api.V1.Config
 {
     [V1ApiController("config/metadataprovider")]
     public class MetadataProviderConfigController : ConfigController<MetadataProviderConfigResource>

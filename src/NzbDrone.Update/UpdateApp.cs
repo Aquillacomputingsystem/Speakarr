@@ -34,10 +34,10 @@ namespace NzbDrone.Update
                 var startupContext = new StartupContext(args);
                 NzbDroneLogger.Register(startupContext, true, true);
 
-                Logger.Info("Starting Readarr Update Client");
+                Logger.Info("Starting Speakarr Update Client");
 
                 var container = new Container(rules => rules.WithNzbDroneRules())
-                    .AutoAddServices(new List<string> { "Readarr.Update" })
+                    .AutoAddServices(new List<string> { "Speakarr.Update" })
                     .AddNzbDroneLogger()
                     .AddStartupContext(startupContext);
 
@@ -105,7 +105,7 @@ namespace NzbDrone.Update
                 throw new ArgumentOutOfRangeException(nameof(arg), "Invalid process ID");
             }
 
-            Logger.Debug("Readarr process ID: {0}", id);
+            Logger.Debug("Speakarr process ID: {0}", id);
             return id;
         }
 

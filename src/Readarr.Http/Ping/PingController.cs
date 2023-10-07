@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Cache;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Http.Ping
+namespace Speakarr.Http.Ping
 {
     public class PingController : Controller
     {

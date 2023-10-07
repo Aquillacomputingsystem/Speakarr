@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Parser.Model;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http.REST;
+using Speakarr.Api.V1.Author;
+using Speakarr.Api.V1.Books;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Parse
+namespace Speakarr.Api.V1.Parse
 {
     public class ParseResource : RestResource
     {

@@ -15,7 +15,7 @@
     <PackageReference Include="System.IO.Abstractions.TestingHelpers" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Readarr.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Core\Readarr.Core.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Speakarr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Speakarr.Core.csproj" />
   </ItemGroup>
 </Project>

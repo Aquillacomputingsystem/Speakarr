@@ -44,7 +44,7 @@ namespace NzbDrone.Core.HealthCheck.Checks
                     {
                         return new HealthCheck(GetType(),
                             HealthCheckResult.Warning,
-                            string.Format(_localizationService.GetLocalizedString("DownloadClientRemovesCompletedDownloadsHealthCheckMessage"), clientName, "Readarr"),
+                            string.Format(_localizationService.GetLocalizedString("DownloadClientRemovesCompletedDownloadsHealthCheckMessage"), clientName, "Speakarr"),
                             "#download-client-removes-completed-downloads");
                     }
                 }

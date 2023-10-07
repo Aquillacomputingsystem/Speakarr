@@ -1,7 +1,7 @@
 declare module '*.module.css';
 
 interface Window {
-  Readarr: {
+  Speakarr: {
     apiKey: string;
     instanceName: string;
     theme: string;

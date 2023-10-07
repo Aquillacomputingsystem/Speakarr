@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
 using NzbDrone.Core.CustomFormats;
-using Readarr.Http.ClientSchema;
-using Readarr.Http.REST;
+using Speakarr.Http.ClientSchema;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.CustomFormats
+namespace Speakarr.Api.V1.CustomFormats
 {
     public class CustomFormatResource : RestResource
     {

@@ -7,55 +7,55 @@ using NLog;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 
-namespace NzbDrone.Core.ImportLists.Readarr
+namespace NzbDrone.Core.ImportLists.Speakarr
 {
-    public interface IReadarrV1Proxy
+    public interface ISpeakarrV1Proxy
     {
-        List<ReadarrAuthor> GetAuthors(ReadarrSettings settings);
-        List<ReadarrBook> GetBooks(ReadarrSettings settings);
-        List<ReadarrProfile> GetProfiles(ReadarrSettings settings);
-        List<ReadarrRootFolder> GetRootFolders(ReadarrSettings settings);
-        List<ReadarrTag> GetTags(ReadarrSettings settings);
-        ValidationFailure Test(ReadarrSettings settings);
+        List<SpeakarrAuthor> GetAuthors(SpeakarrSettings settings);
+        List<SpeakarrBook> GetBooks(SpeakarrSettings settings);
+        List<SpeakarrProfile> GetProfiles(SpeakarrSettings settings);
+        List<SpeakarrRootFolder> GetRootFolders(SpeakarrSettings settings);
+        List<SpeakarrTag> GetTags(SpeakarrSettings settings);
+        ValidationFailure Test(SpeakarrSettings settings);
     }
 
-    public class ReadarrV1Proxy : IReadarrV1Proxy
+    public class SpeakarrV1Proxy : ISpeakarrV1Proxy
     {
         private readonly IHttpClient _httpClient;
         private readonly Logger _logger;
 
-        public ReadarrV1Proxy(IHttpClient httpClient, Logger logger)
+        public SpeakarrV1Proxy(IHttpClient httpClient, Logger logger)
         {
             _httpClient = httpClient;
             _logger = logger;
         }
 
-        public List<ReadarrAuthor> GetAuthors(ReadarrSettings settings)
+        public List<SpeakarrAuthor> GetAuthors(SpeakarrSettings settings)
         {
-            return Execute<ReadarrAuthor>("/api/v1/author", settings);
+            return Execute<SpeakarrAuthor>("/api/v1/author", settings);
         }
 
-        public List<ReadarrBook> GetBooks(ReadarrSettings settings)
+        public List<SpeakarrBook> GetBooks(SpeakarrSettings settings)
         {
-            return Execute<ReadarrBook>("/api/v1/book", settings);
+            return Execute<SpeakarrBook>("/api/v1/book", settings);
         }
 
-        public List<ReadarrProfile> GetProfiles(ReadarrSettings settings)
+        public List<SpeakarrProfile> GetProfiles(SpeakarrSettings settings)
         {
-            return Execute<ReadarrProfile>("/api/v1/qualityprofile", settings);
+            return Execute<SpeakarrProfile>("/api/v1/qualityprofile", settings);
         }
 
-        public List<ReadarrRootFolder> GetRootFolders(ReadarrSettings settings)
+        public List<SpeakarrRootFolder> GetRootFolders(SpeakarrSettings settings)
         {
-            return Execute<ReadarrRootFolder>("api/v1/rootfolder", settings);
+            return Execute<SpeakarrRootFolder>("api/v1/rootfolder", settings);
         }
 
-        public List<ReadarrTag> GetTags(ReadarrSettings settings)
+        public List<SpeakarrTag> GetTags(SpeakarrSettings settings)
         {
-            return Execute<ReadarrTag>("/api/v1/tag", settings);
+            return Execute<SpeakarrTag>("/api/v1/tag", settings);
         }
 
-        public ValidationFailure Test(ReadarrSettings settings)
+        public ValidationFailure Test(SpeakarrSettings settings)
         {
             try
             {
@@ -71,8 +71,8 @@ namespace NzbDrone.Core.ImportLists.Readarr
 
                 if (ex.Response.HasHttpRedirect)
                 {
-                    _logger.Error(ex, "Readarr returned redirect and is invalid");
-                    return new ValidationFailure("BaseUrl", "Readarr URL is invalid, are you missing a URL base?");
+                    _logger.Error(ex, "Speakarr returned redirect and is invalid");
+                    return new ValidationFailure("BaseUrl", "Speakarr URL is invalid, are you missing a URL base?");
                 }
 
                 _logger.Error(ex, "Unable to connect to import list.");
@@ -87,7 +87,7 @@ namespace NzbDrone.Core.ImportLists.Readarr
             return null;
         }
 
-        private List<TResource> Execute<TResource>(string resource, ReadarrSettings settings)
+        private List<TResource> Execute<TResource>(string resource, SpeakarrSettings settings)
         {
             if (settings.BaseUrl.IsNullOrWhiteSpace() || settings.ApiKey.IsNullOrWhiteSpace())
             {

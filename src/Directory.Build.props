@@ -1,5 +1,5 @@
 <Project>
-  <!-- Common to all Readarr Projects -->
+  <!-- Common to all Speakarr Projects -->
   <PropertyGroup>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
@@ -10,22 +10,22 @@
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     <RuntimeIdentifiers>win-x64;win-x86;osx-x64;osx-arm64;linux-x64;linux-musl-x64;linux-arm;linux-musl-arm;linux-arm64;linux-musl-arm64</RuntimeIdentifiers>
 
-    <ReadarrRootDir>$(MSBuildThisFileDirectory)..\</ReadarrRootDir>
+    <SpeakarrRootDir>$(MSBuildThisFileDirectory)..\</SpeakarrRootDir>
 
     <!-- Specifies the type of output -->
-    <ReadarrOutputType>Library</ReadarrOutputType>
-    <ReadarrOutputType Condition="$(MSBuildProjectName.Contains('.Test'))">Test</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceInstall'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceUninstall'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='Readarr'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='Readarr.Console'">Exe</ReadarrOutputType>
-    <ReadarrOutputType Condition="'$(MSBuildProjectName)'=='Readarr.Update'">Update</ReadarrOutputType>
+    <SpeakarrOutputType>Library</SpeakarrOutputType>
+    <SpeakarrOutputType Condition="$(MSBuildProjectName.Contains('.Test'))">Test</SpeakarrOutputType>
+    <SpeakarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceInstall'">Exe</SpeakarrOutputType>
+    <SpeakarrOutputType Condition="'$(MSBuildProjectName)'=='ServiceUninstall'">Exe</SpeakarrOutputType>
+    <SpeakarrOutputType Condition="'$(MSBuildProjectName)'=='Speakarr'">Exe</SpeakarrOutputType>
+    <SpeakarrOutputType Condition="'$(MSBuildProjectName)'=='Speakarr.Console'">Exe</SpeakarrOutputType>
+    <SpeakarrOutputType Condition="'$(MSBuildProjectName)'=='Speakarr.Update'">Update</SpeakarrOutputType>
 
     <!-- Specifies whether it's one of our own libraries -->
-    <ReadarrProject>false</ReadarrProject>
-    <ReadarrProject Condition="$(MSBuildProjectName.StartsWith('Readarr'))">true</ReadarrProject>
-    <ReadarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceInstall'))">true</ReadarrProject>
-    <ReadarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceUninstall'))">true</ReadarrProject>
+    <SpeakarrProject>false</SpeakarrProject>
+    <SpeakarrProject Condition="$(MSBuildProjectName.StartsWith('Speakarr'))">true</SpeakarrProject>
+    <SpeakarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceInstall'))">true</SpeakarrProject>
+    <SpeakarrProject Condition="$(MSBuildProjectName.StartsWith('ServiceUninstall'))">true</SpeakarrProject>
 
     <!-- A test project gets the test sdk packages automatically added -->
     <TestProject>false</TestProject>
@@ -42,14 +42,14 @@
   <PropertyGroup>
     <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
     <!-- Centralize intermediate and default outputs -->
-    <BaseIntermediateOutputPath>$(ReadarrRootDir)_temp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
-    <IntermediateOutputPath>$(ReadarrRootDir)_temp\obj\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
-    <OutputPath>$(ReadarrRootDir)_temp\bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
+    <BaseIntermediateOutputPath>$(SpeakarrRootDir)_temp\obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(SpeakarrRootDir)_temp\obj\$(MSBuildProjectName)\$(Configuration)\</IntermediateOutputPath>
+    <OutputPath>$(SpeakarrRootDir)_temp\bin\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
 
     <!-- Output to _output and _tests respectively -->
-    <OutputPath Condition="'$(ReadarrProject)'=='true'">$(ReadarrRootDir)_output\</OutputPath>
-    <OutputPath Condition="'$(ReadarrOutputType)'=='Test'">$(ReadarrRootDir)_tests\</OutputPath>
-    <OutputPath Condition="'$(ReadarrOutputType)'=='Update'">$(ReadarrRootDir)_output\Readarr.Update\</OutputPath>
+    <OutputPath Condition="'$(SpeakarrProject)'=='true'">$(SpeakarrRootDir)_output\</OutputPath>
+    <OutputPath Condition="'$(SpeakarrOutputType)'=='Test'">$(SpeakarrRootDir)_tests\</OutputPath>
+    <OutputPath Condition="'$(SpeakarrOutputType)'=='Update'">$(SpeakarrRootDir)_output\Speakarr.Update\</OutputPath>
 
     <!-- Paths relative to project file for better readability -->
     <EnableBaseIntermediateOutputPathMismatchWarning>false</EnableBaseIntermediateOutputPathMismatchWarning>
@@ -61,17 +61,17 @@
   </PropertyGroup>
 
   <!-- Test projects need bindingRedirects -->
-  <PropertyGroup Condition="'$(ReadarrOutputType)'=='Test'">
+  <PropertyGroup Condition="'$(SpeakarrOutputType)'=='Test'">
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <SelfContained>false</SelfContained>
   </PropertyGroup>
 
   <!-- Set the Product and Version info for our own projects -->
-  <PropertyGroup Condition="'$(ReadarrProject)'=='true'">
-    <Product>Readarr</Product>
-    <Company>readarr.com</Company>
-    <Copyright>Copyright 2017-$([System.DateTime]::Now.ToString('yyyy')) readarr.com (GNU General Public v3)</Copyright>
+  <PropertyGroup Condition="'$(SpeakarrProject)'=='true'">
+    <Product>Speakarr</Product>
+    <Company>speakarr.com</Company>
+    <Copyright>Copyright 2017-$([System.DateTime]::Now.ToString('yyyy')) speakarr.com (GNU General Public v3)</Copyright>
 
     <!-- Should be replaced by CI -->
     <AssemblyVersion>10.0.0.*</AssemblyVersion>
@@ -88,7 +88,7 @@
   </PropertyGroup>
 
   <!-- Set the AssemblyConfiguration attribute for projects -->
-  <ItemGroup Condition="'$(ReadarrProject)'=='true'">
+  <ItemGroup Condition="'$(SpeakarrProject)'=='true'">
     <AssemblyAttribute Include="System.Reflection.AssemblyConfigurationAttribute">
       <_Parameter1>$(AssemblyConfiguration)</_Parameter1>
     </AssemblyAttribute>
@@ -96,7 +96,7 @@
 
   <PropertyGroup>
     <!-- For now keep the NzbDrone namespace -->
-    <RootNamespace Condition="'$(ReadarrProject)'=='true'">$(MSBuildProjectName.Replace('Readarr','NzbDrone'))</RootNamespace>
+    <RootNamespace Condition="'$(SpeakarrProject)'=='true'">$(MSBuildProjectName.Replace('Speakarr','NzbDrone'))</RootNamespace>
   </PropertyGroup>
 
   <!-- Standard testing packages -->
@@ -109,7 +109,7 @@
   </ItemGroup>
 
   <!-- Set up stylecop -->
-  <ItemGroup Condition="'$(ReadarrProject)'=='true' and '$(EnableAnalyzers)'!='false'">
+  <ItemGroup Condition="'$(SpeakarrProject)'=='true' and '$(EnableAnalyzers)'!='false'">
     <!-- StyleCop analysis -->
     <PackageReference Include="StyleCop.Analyzers" >
       <PrivateAssets>all</PrivateAssets>

@@ -45,9 +45,9 @@ class Updates extends Component {
     const hasUpdateToInstall = hasUpdates && _.some(items, { installable: true, latest: true });
     const noUpdateToInstall = hasUpdates && !hasUpdateToInstall;
 
-    const externalUpdaterPrefix = 'Unable to update Readarr directly,';
+    const externalUpdaterPrefix = 'Unable to update Speakarr directly,';
     const externalUpdaterMessages = {
-      external: 'Readarr is configured to use an external update mechanism',
+      external: 'Speakarr is configured to use an external update mechanism',
       apt: 'use apt to install the update',
       docker: 'update the docker container to receive the update'
     };
@@ -114,7 +114,7 @@ class Updates extends Component {
                 />
 
                 <div className={styles.message}>
-                  The latest version of Readarr is already installed
+                  The latest version of Speakarr is already installed
                 </div>
 
                 {

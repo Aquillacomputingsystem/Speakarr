@@ -3,9 +3,9 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.Core.MetadataSource;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Books
+namespace Speakarr.Api.V1.Books
 {
     [V1ApiController("book/lookup")]
     public class BookLookupController : Controller

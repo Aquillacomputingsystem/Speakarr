@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Series
+namespace Speakarr.Api.V1.Series
 {
     public class SeriesResource : RestResource
     {

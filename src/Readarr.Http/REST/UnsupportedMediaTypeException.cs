@@ -1,7 +1,7 @@
 using System.Net;
-using Readarr.Http.Exceptions;
+using Speakarr.Http.Exceptions;
 
-namespace Readarr.Http.REST
+namespace Speakarr.Http.REST
 {
     public class UnsupportedMediaTypeException : ApiException
     {

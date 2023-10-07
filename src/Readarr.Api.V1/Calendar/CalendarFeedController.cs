@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.Tags;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Calendar
+namespace Speakarr.Api.V1.Calendar
 {
     [V1FeedController("calendar")]
     public class CalendarFeedController : Controller
@@ -27,7 +27,7 @@ namespace Readarr.Api.V1.Calendar
             _tagService = tagService;
         }
 
-        [HttpGet("Readarr.ics")]
+        [HttpGet("Speakarr.ics")]
         public IActionResult GetCalendarFeed(int pastDays = 7, int futureDays = 28, string tagList = "", bool unmonitored = false)
         {
             var start = DateTime.Today.AddDays(-pastDays);
@@ -42,10 +42,10 @@ namespace Readarr.Api.V1.Calendar
             var books = _bookService.BooksBetweenDates(start, end, unmonitored);
             var calendar = new Ical.Net.Calendar
             {
-                ProductId = "-//readarr.com//Readarr//EN"
+                ProductId = "-//speakarr.com//Speakarr//EN"
             };
 
-            var calendarName = "Readarr Book Schedule";
+            var calendarName = "Speakarr Book Schedule";
             calendar.AddProperty(new CalendarProperty("NAME", calendarName));
             calendar.AddProperty(new CalendarProperty("X-WR-CALNAME", calendarName));
 
@@ -59,7 +59,7 @@ namespace Readarr.Api.V1.Calendar
                 }
 
                 var occurrence = calendar.Create<CalendarEvent>();
-                occurrence.Uid = "Readarr_book_" + book.Id;
+                occurrence.Uid = "Speakarr_book_" + book.Id;
 
                 //occurrence.Status = book.HasFile ? EventStatus.Confirmed : EventStatus.Tentative;
                 occurrence.Description = book.Editions.Value.Single(x => x.Monitored).Overview;

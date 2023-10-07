@@ -9,6 +9,6 @@
     <PackageReference Include="Mono.Posix.NETStandard" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common\Readarr.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common\Speakarr.Common.csproj" />
   </ItemGroup>
 </Project>

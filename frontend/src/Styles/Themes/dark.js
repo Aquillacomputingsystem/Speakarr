@@ -1,4 +1,4 @@
-const readarrRed = '#ca302d';
+const speakarrRed = '#ca302d';
 const darkGray = '#888';
 const gray = '#adadad';
 const black = '#000';
@@ -22,10 +22,10 @@ module.exports = {
   successColor: '#27c24c',
   dangerColor: '#f05050',
   warningColor: '#ffa500',
-  infoColor: readarrRed,
+  infoColor: speakarrRed,
   purple,
   pink,
-  readarrRed,
+  speakarrRed,
   helpTextColor: '#909293',
   darkGray,
   gray,
@@ -33,7 +33,7 @@ module.exports = {
 
   // Theme Colors
 
-  themeRed: readarrRed,
+  themeRed: speakarrRed,
   themeAlternateRed: '#a41726',
   themeDarkRed: '#66001a',
   themeDarkColor: '#494949',
@@ -131,14 +131,14 @@ module.exports = {
   //
   // Menu
   menuItemColor: '#e1e2e3',
-  menuItemHoverColor: readarrRed,
+  menuItemHoverColor: speakarrRed,
   menuItemHoverBackgroundColor: '#606060',
 
   //
   // Toolbar
 
-  toobarButtonHoverColor: readarrRed,
-  toobarButtonSelectedColor: readarrRed,
+  toobarButtonHoverColor: speakarrRed,
+  toobarButtonSelectedColor: speakarrRed,
 
   //
   // Scroller

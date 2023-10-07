@@ -3,10 +3,10 @@ using NzbDrone.Core.Blocklisting;
 using NzbDrone.Core.CustomFormats;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.Extensions;
+using Speakarr.Http;
+using Speakarr.Http.Extensions;
 
-namespace Readarr.Api.V1.Blocklist
+namespace Speakarr.Api.V1.Blocklist
 {
     [V1ApiController]
     public class BlocklistController : Controller

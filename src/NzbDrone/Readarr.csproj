@@ -4,15 +4,15 @@
     <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <RuntimeIdentifiers>win-x64;win-x86</RuntimeIdentifiers>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>..\NzbDrone.Host\Readarr.ico</ApplicationIcon>
+    <ApplicationIcon>..\NzbDrone.Host\Speakarr.ico</ApplicationIcon>
     <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Resources.Extensions" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Host\Readarr.Host.csproj" />
-    <ProjectReference Include="..\NzbDrone.Windows\Readarr.Windows.csproj" />
+    <ProjectReference Include="..\NzbDrone.Host\Speakarr.Host.csproj" />
+    <ProjectReference Include="..\NzbDrone.Windows\Speakarr.Windows.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

@@ -4,7 +4,7 @@ using FluentValidation;
 using FluentValidation.Validators;
 using NzbDrone.Common.Extensions;
 
-namespace Readarr.Api.V1.Profiles.Quality
+namespace Speakarr.Api.V1.Profiles.Quality
 {
     public static class QualityItemsValidator
     {

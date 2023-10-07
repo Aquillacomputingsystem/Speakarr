@@ -3,9 +3,9 @@ using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Security;
 using NzbDrone.Core.Update;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Config
+namespace Speakarr.Api.V1.Config
 {
     public class HostConfigResource : RestResource
     {

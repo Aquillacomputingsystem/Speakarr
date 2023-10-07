@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Profiles.Qualities;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Profiles.Quality
+namespace Speakarr.Api.V1.Profiles.Quality
 {
     [V1ApiController("qualityprofile/schema")]
     public class QualityProfileSchemaController : Controller

@@ -1,7 +1,7 @@
 using NzbDrone.Core.Download;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.DownloadClient
+namespace Speakarr.Api.V1.DownloadClient
 {
     [V1ApiController]
     public class DownloadClientController : ProviderControllerBase<DownloadClientResource, DownloadClientBulkResource, IDownloadClient, DownloadClientDefinition>

@@ -3,9 +3,9 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.Core.MetadataSource;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Author
+namespace Speakarr.Api.V1.Author
 {
     [V1ApiController("author/lookup")]
     public class AuthorLookupController : Controller

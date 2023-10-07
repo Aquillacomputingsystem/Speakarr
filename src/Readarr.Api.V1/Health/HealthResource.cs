@@ -2,9 +2,9 @@
 using System.Linq;
 using NzbDrone.Common.Http;
 using NzbDrone.Core.HealthCheck;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Health
+namespace Speakarr.Api.V1.Health
 {
     public class HealthResource : RestResource
     {

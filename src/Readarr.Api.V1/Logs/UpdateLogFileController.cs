@@ -6,9 +6,9 @@ using NzbDrone.Common.Disk;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Configuration;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Logs
+namespace Speakarr.Api.V1.Logs
 {
     [V1ApiController("log/file/update")]
     public class UpdateLogFileController : LogFileControllerBase

@@ -61,7 +61,7 @@ namespace NzbDrone.Core.Download.Clients.Blackhole
                 {
                     DownloadClientInfo = DownloadClientItemClientInfo.FromDownloadClient(this),
                     DownloadId = Definition.Name + "_" + item.DownloadId,
-                    Category = "Readarr",
+                    Category = "Speakarr",
                     Title = item.Title,
 
                     TotalSize = item.TotalSize,

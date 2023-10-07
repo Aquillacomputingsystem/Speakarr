@@ -1,10 +1,10 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Instrumentation;
-using Readarr.Http;
-using Readarr.Http.Extensions;
+using Speakarr.Http;
+using Speakarr.Http.Extensions;
 
-namespace Readarr.Api.V1.Logs
+namespace Speakarr.Api.V1.Logs
 {
     [V1ApiController]
     public class LogController : Controller

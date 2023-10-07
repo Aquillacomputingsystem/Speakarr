@@ -12,11 +12,11 @@ using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Core.ProgressMessaging;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Readarr.Http;
-using Readarr.Http.REST;
-using Readarr.Http.Validation;
+using Speakarr.Http;
+using Speakarr.Http.REST;
+using Speakarr.Http.Validation;
 
-namespace Readarr.Api.V1.Commands
+namespace Speakarr.Api.V1.Commands
 {
     [V1ApiController]
     public class CommandController : RestControllerWithSignalR<CommandResource, CommandModel>, IHandle<CommandUpdatedEvent>

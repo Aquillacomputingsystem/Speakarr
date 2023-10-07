@@ -18,7 +18,7 @@ using NzbDrone.Core.Test.Framework;
 namespace NzbDrone.Core.Test.DecisionEngineTests
 {
     [TestFixture]
-    [Ignore("Pending Readarr fixes")]
+    [Ignore("Pending Speakarr fixes")]
     public class UpgradeDiskSpecificationFixture : CoreTest<UpgradeDiskSpecification>
     {
         private RemoteBook _parseResultMulti;

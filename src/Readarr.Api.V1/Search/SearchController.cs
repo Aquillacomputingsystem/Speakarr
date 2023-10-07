@@ -4,11 +4,11 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.MediaCover;
 using NzbDrone.Core.MetadataSource;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
+using Speakarr.Api.V1.Author;
+using Speakarr.Api.V1.Books;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Search
+namespace Speakarr.Api.V1.Search
 {
     [V1ApiController]
     public class SearchController : Controller

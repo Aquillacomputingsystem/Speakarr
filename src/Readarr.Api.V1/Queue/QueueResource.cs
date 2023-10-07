@@ -5,12 +5,12 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Download.TrackedDownloads;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Qualities;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Api.V1.CustomFormats;
-using Readarr.Http.REST;
+using Speakarr.Api.V1.Author;
+using Speakarr.Api.V1.Books;
+using Speakarr.Api.V1.CustomFormats;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Queue
+namespace Speakarr.Api.V1.Queue
 {
     public class QueueResource : RestResource
     {

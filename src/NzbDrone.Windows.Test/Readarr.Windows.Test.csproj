@@ -3,8 +3,8 @@
     <TargetFrameworks>net6.0</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Common.Test\Readarr.Common.Test.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Readarr.Test.Common.csproj" />
-    <ProjectReference Include="..\NzbDrone.Windows\Readarr.Windows.csproj" />
+    <ProjectReference Include="..\NzbDrone.Common.Test\Speakarr.Common.Test.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Speakarr.Test.Common.csproj" />
+    <ProjectReference Include="..\NzbDrone.Windows\Speakarr.Windows.csproj" />
   </ItemGroup>
 </Project>

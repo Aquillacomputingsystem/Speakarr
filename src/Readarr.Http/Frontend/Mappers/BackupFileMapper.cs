@@ -3,7 +3,7 @@ using NLog;
 using NzbDrone.Common.Disk;
 using NzbDrone.Core.Backup;
 
-namespace Readarr.Http.Frontend.Mappers
+namespace Speakarr.Http.Frontend.Mappers
 {
     public class BackupFileMapper : StaticResourceMapperBase
     {

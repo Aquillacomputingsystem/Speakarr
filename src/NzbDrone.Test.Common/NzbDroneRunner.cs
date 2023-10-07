@@ -29,7 +29,7 @@ namespace NzbDrone.Test.Common
         public PostgresOptions PostgresOptions { get; private set; }
         public int Port { get; private set; }
 
-        public NzbDroneRunner(Logger logger, PostgresOptions postgresOptions, int port = 8787)
+        public NzbDroneRunner(Logger logger, PostgresOptions postgresOptions, int port = 8788)
         {
             _processProvider = new ProcessProvider(logger);
             _restClient = new RestClient($"http://localhost:{port}/api/v1");
@@ -45,24 +45,24 @@ namespace NzbDrone.Test.Common
 
             GenerateConfigFile();
 
-            string readarrConsoleExe;
+            string speakarrConsoleExe;
             if (OsInfo.IsWindows)
             {
-                readarrConsoleExe = "Readarr.Console.exe";
+                speakarrConsoleExe = "Speakarr.Console.exe";
             }
             else
             {
-                readarrConsoleExe = "Readarr";
+                speakarrConsoleExe = "Speakarr";
             }
 
             _startupLog = new List<string>();
             if (BuildInfo.IsDebug)
             {
-                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "..", "_output", "net6.0", readarrConsoleExe));
+                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "..", "_output", "net6.0", speakarrConsoleExe));
             }
             else
             {
-                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "bin", readarrConsoleExe));
+                Start(Path.Combine(TestContext.CurrentContext.TestDirectory, "..", "bin", speakarrConsoleExe));
             }
 
             while (true)
@@ -71,7 +71,7 @@ namespace NzbDrone.Test.Common
 
                 if (_nzbDroneProcess.HasExited)
                 {
-                    TestContext.Progress.WriteLine("Readarr has exited unexpectedly");
+                    TestContext.Progress.WriteLine("Speakarr has exited unexpectedly");
                     Thread.Sleep(2000);
                     var output = _startupLog.Join(Environment.NewLine);
                     Assert.Fail("Process has exited: ExitCode={0} Output={1}", _nzbDroneProcess.ExitCode, output);
@@ -86,11 +86,11 @@ namespace NzbDrone.Test.Common
                 if (statusCall.ResponseStatus == ResponseStatus.Completed)
                 {
                     _startupLog = null;
-                    TestContext.Progress.WriteLine($"Readarr {Port} is started. Running Tests");
+                    TestContext.Progress.WriteLine($"Speakarr {Port} is started. Running Tests");
                     return;
                 }
 
-                TestContext.Progress.WriteLine("Waiting for Readarr to start. Response Status : {0}  [{1}] {2}", statusCall.ResponseStatus, statusCall.StatusDescription, statusCall.ErrorException.Message);
+                TestContext.Progress.WriteLine("Waiting for Speakarr to start. Response Status : {0}  [{1}] {2}", statusCall.ResponseStatus, statusCall.StatusDescription, statusCall.ErrorException.Message);
 
                 Thread.Sleep(500);
             }
@@ -105,7 +105,7 @@ namespace NzbDrone.Test.Common
                     _nzbDroneProcess.Refresh();
                     if (_nzbDroneProcess.HasExited)
                     {
-                        var log = File.ReadAllLines(Path.Combine(AppData, "logs", "readarr.trace.txt"));
+                        var log = File.ReadAllLines(Path.Combine(AppData, "logs", "speakarr.trace.txt"));
                         var output = log.Join(Environment.NewLine);
                         TestContext.Progress.WriteLine("Process has exited prematurely: ExitCode={0} Output:\n{1}", _nzbDroneProcess.ExitCode, output);
                     }
@@ -130,8 +130,8 @@ namespace NzbDrone.Test.Common
                     _processProvider.Kill(_nzbDroneProcess.Id);
                 }
 
-                _processProvider.KillAll(ProcessProvider.READARR_CONSOLE_PROCESS_NAME);
-                _processProvider.KillAll(ProcessProvider.READARR_PROCESS_NAME);
+                _processProvider.KillAll(ProcessProvider.SPEAKARR_CONSOLE_PROCESS_NAME);
+                _processProvider.KillAll(ProcessProvider.SPEAKARR_PROCESS_NAME);
             }
             catch (InvalidOperationException)
             {
@@ -146,13 +146,13 @@ namespace NzbDrone.Test.Common
             StringDictionary envVars = new ();
             if (PostgresOptions?.Host != null)
             {
-                envVars.Add("Readarr__Postgres__Host", PostgresOptions.Host);
-                envVars.Add("Readarr__Postgres__Port", PostgresOptions.Port.ToString());
-                envVars.Add("Readarr__Postgres__User", PostgresOptions.User);
-                envVars.Add("Readarr__Postgres__Password", PostgresOptions.Password);
-                envVars.Add("Readarr__Postgres__MainDb", PostgresOptions.MainDb);
-                envVars.Add("Readarr__Postgres__LogDb", PostgresOptions.LogDb);
-                envVars.Add("Readarr__Postgres__CacheDb", PostgresOptions.CacheDb);
+                envVars.Add("Speakarr__Postgres__Host", PostgresOptions.Host);
+                envVars.Add("Speakarr__Postgres__Port", PostgresOptions.Port.ToString());
+                envVars.Add("Speakarr__Postgres__User", PostgresOptions.User);
+                envVars.Add("Speakarr__Postgres__Password", PostgresOptions.Password);
+                envVars.Add("Speakarr__Postgres__MainDb", PostgresOptions.MainDb);
+                envVars.Add("Speakarr__Postgres__LogDb", PostgresOptions.LogDb);
+                envVars.Add("Speakarr__Postgres__CacheDb", PostgresOptions.CacheDb);
 
                 TestContext.Progress.WriteLine("Using env vars:\n{0}", envVars.ToJson());
             }

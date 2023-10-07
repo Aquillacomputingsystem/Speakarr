@@ -9,7 +9,7 @@ import AppRoutes from './AppRoutes';
 
 function App({ store, history }) {
   return (
-    <DocumentTitle title={window.Readarr.instanceName}>
+    <DocumentTitle title={window.Speakarr.instanceName}>
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <ApplyTheme>

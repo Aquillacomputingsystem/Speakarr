@@ -20,8 +20,8 @@ namespace NzbDrone.Common.Composition
         public static IEnumerable<Assembly> Load(IEnumerable<string> assemblies)
         {
             var toLoad = assemblies.ToList();
-            toLoad.Add("Readarr.Common");
-            toLoad.Add(OsInfo.IsWindows ? "Readarr.Windows" : "Readarr.Mono");
+            toLoad.Add("Speakarr.Common");
+            toLoad.Add(OsInfo.IsWindows ? "Speakarr.Windows" : "Speakarr.Mono");
 
             var startupPath = AppDomain.CurrentDomain.BaseDirectory;
 

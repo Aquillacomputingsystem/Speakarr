@@ -15,10 +15,10 @@ using NzbDrone.Core.IndexerSearch;
 using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.Validation;
-using Readarr.Http;
+using Speakarr.Http;
 using HttpStatusCode = System.Net.HttpStatusCode;
 
-namespace Readarr.Api.V1.Indexers
+namespace Speakarr.Api.V1.Indexers
 {
     [V1ApiController]
     public class ReleaseController : ReleaseControllerBase

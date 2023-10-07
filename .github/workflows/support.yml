@@ -15,7 +15,7 @@ jobs:
           issue-comment: >
             :wave: @{issue-author}, we use the issue tracker exclusively
             for bug reports and feature requests. However, this issue appears
-            to be a support request. Please hop over onto our [Discord](https://readarr.com/discord).
+            to be a support request. Please hop over onto our [Discord](https://speakarr.com/discord).
           close-issue: true
           lock-issue: false
       - uses: dessant/support-requests@v3
@@ -26,6 +26,6 @@ jobs:
             :wave: @{issue-author}, In order to help you further we'll need to see logs. 
             You'll need to enable trace logging and replicate the problem that you encountered. 
             Guidance on how to enable trace logging can be found in 
-            our [troubleshooting guide](https://wiki.servarr.com/readarr/troubleshooting#logging-and-log-files).
+            our [troubleshooting guide](https://wiki.servarr.com/speakarr/troubleshooting#logging-and-log-files).
           close-issue: false
           lock-issue: false

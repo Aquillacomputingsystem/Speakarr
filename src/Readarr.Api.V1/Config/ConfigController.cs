@@ -3,9 +3,9 @@ using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Config
+namespace Speakarr.Api.V1.Config
 {
     public abstract class ConfigController<TResource> : RestController<TResource>
         where TResource : RestResource, new()

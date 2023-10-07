@@ -34,8 +34,8 @@ namespace NzbDrone.Common.Processes
     {
         private readonly Logger _logger;
 
-        public const string READARR_PROCESS_NAME = "Readarr";
-        public const string READARR_CONSOLE_PROCESS_NAME = "Readarr.Console";
+        public const string SPEAKARR_PROCESS_NAME = "Speakarr";
+        public const string SPEAKARR_CONSOLE_PROCESS_NAME = "Speakarr.Console";
 
         public ProcessProvider(Logger logger)
         {

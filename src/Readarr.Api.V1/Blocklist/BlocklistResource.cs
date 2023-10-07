@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using NzbDrone.Core.CustomFormats;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Qualities;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.CustomFormats;
-using Readarr.Http.REST;
+using Speakarr.Api.V1.Author;
+using Speakarr.Api.V1.CustomFormats;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Blocklist
+namespace Speakarr.Api.V1.Blocklist
 {
     public class BlocklistResource : RestResource
     {

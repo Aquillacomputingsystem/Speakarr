@@ -4,9 +4,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using FluentValidation;
 using FluentValidation.Internal;
-using Readarr.Http.ClientSchema;
+using Speakarr.Http.ClientSchema;
 
-namespace Readarr.Http.REST
+namespace Speakarr.Http.REST
 {
     public class ResourceValidator<TResource> : AbstractValidator<TResource>
     {

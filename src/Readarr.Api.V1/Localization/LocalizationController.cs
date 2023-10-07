@@ -2,9 +2,9 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Localization;
-using Readarr.Http;
+using Speakarr.Http;
 
-namespace Readarr.Api.V1.Localization
+namespace Speakarr.Api.V1.Localization
 {
     [V1ApiController]
     public class LocalizationController : Controller

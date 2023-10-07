@@ -2,7 +2,7 @@ using System;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.ImportLists;
 
-namespace Readarr.Api.V1.ImportLists
+namespace Speakarr.Api.V1.ImportLists
 {
     public class ImportListResource : ProviderResource<ImportListResource>
     {

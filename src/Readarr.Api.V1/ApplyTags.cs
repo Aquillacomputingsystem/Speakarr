@@ -1,4 +1,4 @@
-namespace Readarr.Api.V1
+namespace Speakarr.Api.V1
 {
     public enum ApplyTags
     {

@@ -48,12 +48,12 @@ namespace NzbDrone.Automation.Test
             _runner.KillAll();
             _runner.Start();
 
-            driver.Url = "http://localhost:8787";
+            driver.Url = "http://localhost:8788";
 
             var page = new PageBase(driver);
             page.WaitForNoSpinner();
 
-            driver.ExecuteScript("window.Readarr.NameViews = true;");
+            driver.ExecuteScript("window.Speakarr.NameViews = true;");
 
             GetPageErrors().Should().BeEmpty();
         }

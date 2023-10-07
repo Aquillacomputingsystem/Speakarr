@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using NzbDrone.Core.Update;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Update
+namespace Speakarr.Api.V1.Update
 {
     public class UpdateResource : RestResource
     {

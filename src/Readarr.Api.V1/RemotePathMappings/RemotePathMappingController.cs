@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.RemotePathMappings;
 using NzbDrone.Core.Validation.Paths;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.RemotePathMappings
+namespace Speakarr.Api.V1.RemotePathMappings
 {
     [V1ApiController]
     public class RemotePathMappingController : RestController<RemotePathMappingResource>

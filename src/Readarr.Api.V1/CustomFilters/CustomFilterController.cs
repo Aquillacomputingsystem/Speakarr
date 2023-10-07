@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.CustomFilters;
 using NzbDrone.Http.REST.Attributes;
-using Readarr.Http;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.CustomFilters
+namespace Speakarr.Api.V1.CustomFilters
 {
     [V1ApiController]
     public class CustomFilterController : RestController<CustomFilterResource>

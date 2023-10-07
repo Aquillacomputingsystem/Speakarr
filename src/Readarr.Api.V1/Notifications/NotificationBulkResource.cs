@@ -1,6 +1,6 @@
 using NzbDrone.Core.Notifications;
 
-namespace Readarr.Api.V1.Notifications
+namespace Speakarr.Api.V1.Notifications
 {
     public class NotificationBulkResource : ProviderBulkResource<NotificationBulkResource>
     {

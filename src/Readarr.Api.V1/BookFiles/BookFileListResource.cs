@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Qualities;
 
-namespace Readarr.Api.V1.BookFiles
+namespace Speakarr.Api.V1.BookFiles
 {
     public class BookFileListResource
     {

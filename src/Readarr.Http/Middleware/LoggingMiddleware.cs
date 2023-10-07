@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NLog;
 using NzbDrone.Common.Extensions;
-using Readarr.Http.ErrorManagement;
-using Readarr.Http.Extensions;
+using Speakarr.Http.ErrorManagement;
+using Speakarr.Http.Extensions;
 
-namespace Readarr.Http.Middleware
+namespace Speakarr.Http.Middleware
 {
     public class LoggingMiddleware
     {
@@ -16,11 +16,11 @@ namespace Readarr.Http.Middleware
         private static readonly Logger _loggerApi = LogManager.GetLogger("Api");
         private static int _requestSequenceID;
 
-        private readonly ReadarrErrorPipeline _errorHandler;
+        private readonly SpeakarrErrorPipeline _errorHandler;
         private readonly RequestDelegate _next;
 
         public LoggingMiddleware(RequestDelegate next,
-            ReadarrErrorPipeline errorHandler)
+            SpeakarrErrorPipeline errorHandler)
         {
             _next = next;
             _errorHandler = errorHandler;

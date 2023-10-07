@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Http.Authentication
+namespace Speakarr.Http.Authentication
 {
     [AllowAnonymous]
     [ApiController]

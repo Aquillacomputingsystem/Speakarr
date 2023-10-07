@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Readarr",
-    "description": "Readarr API docs",
+    "title": "Speakarr",
+    "description": "Speakarr API docs",
     "license": {
       "name": "GPL-3.0",
-      "url": "https://github.com/Readarr/Readarr/blob/develop/LICENSE"
+      "url": "https://github.com/Speakarr/Speakarr/blob/develop/LICENSE"
     },
     "version": "1.0.0"
   },
@@ -21,7 +21,7 @@
           ]
         },
         "hostpath": {
-          "default": "localhost:8787"
+          "default": "localhost:8788"
         }
       }
     }
@@ -1352,7 +1352,7 @@
         }
       }
     },
-    "/feed/v1/calendar/readarr.ics": {
+    "/feed/v1/calendar/speakarr.ics": {
       "get": {
         "tags": [
           "CalendarFeed"

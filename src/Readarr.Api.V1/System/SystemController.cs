@@ -8,10 +8,10 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Lifecycle;
-using Readarr.Http;
-using Readarr.Http.Validation;
+using Speakarr.Http;
+using Speakarr.Http.Validation;
 
-namespace Readarr.Api.V1.System
+namespace Speakarr.Api.V1.System
 {
     [V1ApiController]
     public class SystemController : Controller

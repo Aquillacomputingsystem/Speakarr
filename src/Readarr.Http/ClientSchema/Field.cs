@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Readarr.Http.ClientSchema
+namespace Speakarr.Http.ClientSchema
 {
     public class Field
     {

@@ -19,11 +19,11 @@ ProgressEnd()
 
 UpdateVersionNumber()
 {
-    if [ "$READARRVERSION" != "" ]; then
+    if [ "$SPEAKARRVERSION" != "" ]; then
         echo "Updating Version Info"
-        sed -i'' -e "s/<AssemblyVersion>[0-9.*]\+<\/AssemblyVersion>/<AssemblyVersion>$READARRVERSION<\/AssemblyVersion>/g" src/Directory.Build.props
+        sed -i'' -e "s/<AssemblyVersion>[0-9.*]\+<\/AssemblyVersion>/<AssemblyVersion>$SPEAKARRVERSION<\/AssemblyVersion>/g" src/Directory.Build.props
         sed -i'' -e "s/<AssemblyConfiguration>[\$()A-Za-z-]\+<\/AssemblyConfiguration>/<AssemblyConfiguration>${BUILD_SOURCEBRANCHNAME}<\/AssemblyConfiguration>/g" src/Directory.Build.props
-        sed -i'' -e "s/<string>10.0.0.0<\/string>/<string>$READARRVERSION<\/string>/g" distribution/osx/Readarr.app/Contents/Info.plist
+        sed -i'' -e "s/<string>10.0.0.0<\/string>/<string>$SPEAKARRVERSION<\/string>/g" distribution/osx/Speakarr.app/Contents/Info.plist
     fi
 }
 
@@ -68,7 +68,7 @@ Build()
     rm -rf $outputFolder
     rm -rf $testPackageFolder
 
-    slnFile=src/Readarr.sln
+    slnFile=src/Speakarr.sln
 
     if [ $os = "windows" ]; then
         platform=Windows
@@ -109,7 +109,7 @@ PackageFiles()
     rm -rf $folder
     mkdir -p $folder
     cp -r $outputFolder/$framework/$runtime/publish/* $folder
-    cp -r $outputFolder/Readarr.Update/$framework/$runtime/publish $folder/Readarr.Update
+    cp -r $outputFolder/Speakarr.Update/$framework/$runtime/publish $folder/Speakarr.Update
     cp -r $outputFolder/UI $folder
 
     echo "Adding LICENSE"
@@ -123,7 +123,7 @@ PackageLinux()
 
     ProgressStart "Creating $runtime Package for $framework"
 
-    local folder=$artifactsFolder/$runtime/$framework/Readarr
+    local folder=$artifactsFolder/$runtime/$framework/Speakarr
 
     PackageFiles "$folder" "$framework" "$runtime"
 
@@ -131,14 +131,14 @@ PackageLinux()
     rm -f $folder/ServiceUninstall.*
     rm -f $folder/ServiceInstall.*
 
-    echo "Removing Readarr.Windows"
-    rm $folder/Readarr.Windows.*
+    echo "Removing Speakarr.Windows"
+    rm $folder/Speakarr.Windows.*
 
-    echo "Adding Readarr.Mono to UpdatePackage"
-    cp $folder/Readarr.Mono.* $folder/Readarr.Update
+    echo "Adding Speakarr.Mono to UpdatePackage"
+    cp $folder/Speakarr.Mono.* $folder/Speakarr.Update
     if [ "$framework" = "net6.0" ]; then
-        cp $folder/Mono.Posix.NETStandard.* $folder/Readarr.Update
-        cp $folder/libMonoPosixHelper.* $folder/Readarr.Update
+        cp $folder/Mono.Posix.NETStandard.* $folder/Speakarr.Update
+        cp $folder/libMonoPosixHelper.* $folder/Speakarr.Update
     fi
 
     ProgressEnd "Creating $runtime Package for $framework"
@@ -151,7 +151,7 @@ PackageMacOS()
     
     ProgressStart "Creating MacOS Package for $framework $runtime"
 
-    local folder=$artifactsFolder/$runtime/$framework/Readarr
+    local folder=$artifactsFolder/$runtime/$framework/Speakarr
 
     PackageFiles "$folder" "$framework" "$runtime"
 
@@ -159,14 +159,14 @@ PackageMacOS()
     rm -f $folder/ServiceUninstall.*
     rm -f $folder/ServiceInstall.*
 
-    echo "Removing Readarr.Windows"
-    rm $folder/Readarr.Windows.*
+    echo "Removing Speakarr.Windows"
+    rm $folder/Speakarr.Windows.*
 
-    echo "Adding Readarr.Mono to UpdatePackage"
-    cp $folder/Readarr.Mono.* $folder/Readarr.Update
+    echo "Adding Speakarr.Mono to UpdatePackage"
+    cp $folder/Speakarr.Mono.* $folder/Speakarr.Update
     if [ "$framework" = "net6.0" ]; then
-        cp $folder/Mono.Posix.NETStandard.* $folder/Readarr.Update
-        cp $folder/libMonoPosixHelper.* $folder/Readarr.Update
+        cp $folder/Mono.Posix.NETStandard.* $folder/Speakarr.Update
+        cp $folder/libMonoPosixHelper.* $folder/Speakarr.Update
     fi
 
     ProgressEnd 'Creating MacOS Package'
@@ -183,14 +183,14 @@ PackageMacOSApp()
 
     rm -rf $folder
     mkdir -p $folder
-    cp -r distribution/osx/Readarr.app $folder
-    mkdir -p $folder/Readarr.app/Contents/MacOS
+    cp -r distribution/osx/Speakarr.app $folder
+    mkdir -p $folder/Speakarr.app/Contents/MacOS
 
     echo "Copying Binaries"
-    cp -r $artifactsFolder/$runtime/$framework/Readarr/* $folder/Readarr.app/Contents/MacOS
+    cp -r $artifactsFolder/$runtime/$framework/Speakarr/* $folder/Speakarr.app/Contents/MacOS
 
     echo "Removing Update Folder"
-    rm -r $folder/Readarr.app/Contents/MacOS/Readarr.Update
+    rm -r $folder/Speakarr.app/Contents/MacOS/Speakarr.Update
 
     ProgressEnd 'Creating macOS App Package'
 }
@@ -202,18 +202,18 @@ PackageWindows()
 
     ProgressStart "Creating $runtime Package for $framework"
 
-    local folder=$artifactsFolder/$runtime/$framework/Readarr
+    local folder=$artifactsFolder/$runtime/$framework/Speakarr
     
     PackageFiles "$folder" "$framework" "$runtime"
     cp -r $outputFolder/$framework-windows/$runtime/publish/* $folder
 
-    echo "Removing Readarr.Mono"
-    rm -f $folder/Readarr.Mono.*
+    echo "Removing Speakarr.Mono"
+    rm -f $folder/Speakarr.Mono.*
     rm -f $folder/Mono.Posix.NETStandard.*
     rm -f $folder/libMonoPosixHelper.*
 
-    echo "Adding Readarr.Windows to UpdatePackage"
-    cp $folder/Readarr.Windows.* $folder/Readarr.Update
+    echo "Adding Speakarr.Windows to UpdatePackage"
+    cp $folder/Speakarr.Windows.* $folder/Speakarr.Update
 
     ProgressEnd "Creating $runtime Package for $framework"
 }
@@ -245,7 +245,7 @@ BuildInstaller()
     local framework="$1"
     local runtime="$2"
     
-    ./_inno/ISCC.exe distribution/windows/setup/readarr.iss "//DFramework=$framework" "//DRuntime=$runtime"
+    ./_inno/ISCC.exe distribution/windows/setup/speakarr.iss "//DFramework=$framework" "//DRuntime=$runtime"
 }
 
 InstallInno()

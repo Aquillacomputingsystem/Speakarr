@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using NzbDrone.Common.EnvironmentInfo;
-using Readarr.Http.Extensions;
+using Speakarr.Http.Extensions;
 
-namespace Readarr.Http.Middleware
+namespace Speakarr.Http.Middleware
 {
     public class VersionMiddleware
     {

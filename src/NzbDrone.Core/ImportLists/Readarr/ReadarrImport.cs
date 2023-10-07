@@ -9,24 +9,24 @@ using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.Validation;
 
-namespace NzbDrone.Core.ImportLists.Readarr
+namespace NzbDrone.Core.ImportLists.Speakarr
 {
-    public class ReadarrImport : ImportListBase<ReadarrSettings>
+    public class SpeakarrImport : ImportListBase<SpeakarrSettings>
     {
-        private readonly IReadarrV1Proxy _readarrV1Proxy;
-        public override string Name => "Readarr";
+        private readonly ISpeakarrV1Proxy _speakarrV1Proxy;
+        public override string Name => "Speakarr";
 
         public override ImportListType ListType => ImportListType.Program;
         public override TimeSpan MinRefreshInterval => TimeSpan.FromMinutes(15);
 
-        public ReadarrImport(IReadarrV1Proxy readarrV1Proxy,
+        public SpeakarrImport(ISpeakarrV1Proxy speakarrV1Proxy,
                             IImportListStatusService importListStatusService,
                             IConfigService configService,
                             IParsingService parsingService,
                             Logger logger)
             : base(importListStatusService, configService, parsingService, logger)
         {
-            _readarrV1Proxy = readarrV1Proxy;
+            _speakarrV1Proxy = speakarrV1Proxy;
         }
 
         public override IList<ImportListItemInfo> Fetch()
@@ -35,8 +35,8 @@ namespace NzbDrone.Core.ImportLists.Readarr
 
             try
             {
-                var remoteBooks = _readarrV1Proxy.GetBooks(Settings);
-                var remoteAuthors = _readarrV1Proxy.GetAuthors(Settings);
+                var remoteBooks = _speakarrV1Proxy.GetBooks(Settings);
+                var remoteAuthors = _speakarrV1Proxy.GetAuthors(Settings);
 
                 var authorDict = remoteAuthors.ToDictionary(x => x.Id);
 
@@ -103,7 +103,7 @@ namespace NzbDrone.Core.ImportLists.Readarr
 
             if (action == "getProfiles")
             {
-                var devices = _readarrV1Proxy.GetProfiles(Settings);
+                var devices = _speakarrV1Proxy.GetProfiles(Settings);
 
                 return new
                 {
@@ -118,7 +118,7 @@ namespace NzbDrone.Core.ImportLists.Readarr
 
             if (action == "getTags")
             {
-                var devices = _readarrV1Proxy.GetTags(Settings);
+                var devices = _speakarrV1Proxy.GetTags(Settings);
 
                 return new
                 {
@@ -133,7 +133,7 @@ namespace NzbDrone.Core.ImportLists.Readarr
 
             if (action == "getRootFolders")
             {
-                var remoteRootFolders = _readarrV1Proxy.GetRootFolders(Settings);
+                var remoteRootFolders = _speakarrV1Proxy.GetRootFolders(Settings);
 
                 return new
                 {
@@ -151,7 +151,7 @@ namespace NzbDrone.Core.ImportLists.Readarr
 
         protected override void Test(List<ValidationFailure> failures)
         {
-            failures.AddIfNotNull(_readarrV1Proxy.Test(Settings));
+            failures.AddIfNotNull(_speakarrV1Proxy.Test(Settings));
         }
     }
 }

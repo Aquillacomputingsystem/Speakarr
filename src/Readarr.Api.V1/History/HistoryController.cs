@@ -8,12 +8,12 @@ using NzbDrone.Core.Datastore;
 using NzbDrone.Core.DecisionEngine.Specifications;
 using NzbDrone.Core.Download;
 using NzbDrone.Core.History;
-using Readarr.Api.V1.Author;
-using Readarr.Api.V1.Books;
-using Readarr.Http;
-using Readarr.Http.Extensions;
+using Speakarr.Api.V1.Author;
+using Speakarr.Api.V1.Books;
+using Speakarr.Http;
+using Speakarr.Http.Extensions;
 
-namespace Readarr.Api.V1.History
+namespace Speakarr.Api.V1.History
 {
     [V1ApiController]
     public class HistoryController : Controller

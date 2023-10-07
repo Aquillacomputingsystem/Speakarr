@@ -6,11 +6,11 @@ using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Exceptions;
 
-namespace Readarr.Http.Extensions
+namespace Speakarr.Http.Extensions
 {
     public static class RequestExtensions
     {
-        // See src/Readarr.Api.V1/Queue/QueueModule.cs
+        // See src/Speakarr.Api.V1/Queue/QueueModule.cs
         private static readonly HashSet<string> VALID_SORT_KEYS = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
             "authors.sortname", //Workaround authors table properties not being added on isValidSortKey call

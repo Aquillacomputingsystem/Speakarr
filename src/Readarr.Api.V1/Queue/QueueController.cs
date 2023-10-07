@@ -15,11 +15,11 @@ using NzbDrone.Core.Qualities;
 using NzbDrone.Core.Queue;
 using NzbDrone.Http.REST.Attributes;
 using NzbDrone.SignalR;
-using Readarr.Http;
-using Readarr.Http.Extensions;
-using Readarr.Http.REST;
+using Speakarr.Http;
+using Speakarr.Http.Extensions;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Queue
+namespace Speakarr.Api.V1.Queue
 {
     [V1ApiController]
     public class QueueController : RestControllerWithSignalR<QueueResource, NzbDrone.Core.Queue.Queue>,

@@ -1,7 +1,7 @@
 ﻿using System;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.System.Tasks
+namespace Speakarr.Api.V1.System.Tasks
 {
     public class TaskResource : RestResource
     {

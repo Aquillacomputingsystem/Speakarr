@@ -6,7 +6,7 @@ using NLog;
 using NzbDrone.Common.Disk;
 using NzbDrone.Core.Configuration;
 
-namespace Readarr.Api.V1.Logs
+namespace Speakarr.Api.V1.Logs
 {
     public abstract class LogFileControllerBase : Controller
     {

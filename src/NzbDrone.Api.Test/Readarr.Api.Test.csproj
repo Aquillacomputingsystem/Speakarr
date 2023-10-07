@@ -6,8 +6,8 @@
     <PackageReference Include="NBuilder" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NzbDrone.Core\Readarr.Core.csproj" />
-    <ProjectReference Include="..\NzbDrone.Test.Common\Readarr.Test.Common.csproj" />
-    <ProjectReference Include="..\Readarr.Http\Readarr.Http.csproj" />
+    <ProjectReference Include="..\NzbDrone.Core\Speakarr.Core.csproj" />
+    <ProjectReference Include="..\NzbDrone.Test.Common\Speakarr.Test.Common.csproj" />
+    <ProjectReference Include="..\Speakarr.Http\Speakarr.Http.csproj" />
   </ItemGroup>
 </Project>

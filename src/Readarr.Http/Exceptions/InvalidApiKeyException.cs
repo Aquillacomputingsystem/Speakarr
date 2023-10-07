@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Readarr.Http.Exceptions
+namespace Speakarr.Http.Exceptions
 {
     public class InvalidApiKeyException : Exception
     {

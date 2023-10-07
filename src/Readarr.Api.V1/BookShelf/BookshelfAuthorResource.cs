@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Readarr.Api.V1.Books;
+using Speakarr.Api.V1.Books;
 
-namespace Readarr.Api.V1.Bookshelf
+namespace Speakarr.Api.V1.Bookshelf
 {
     public class BookshelfAuthorResource
     {

@@ -1,9 +1,9 @@
 using FluentValidation;
 using NzbDrone.Core.Configuration;
-using Readarr.Http;
-using Readarr.Http.Validation;
+using Speakarr.Http;
+using Speakarr.Http.Validation;
 
-namespace Readarr.Api.V1.Config
+namespace Speakarr.Api.V1.Config
 {
     [V1ApiController("config/indexer")]
     public class IndexerConfigController : ConfigController<IndexerConfigResource>

@@ -1,7 +1,7 @@
 using System;
 using System.Net;
 
-namespace Readarr.Http.Exceptions
+namespace Speakarr.Http.Exceptions
 {
     public abstract class ApiException : Exception
     {

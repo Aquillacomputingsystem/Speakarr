@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NzbDrone.Core.Indexers;
 
-namespace Readarr.Api.V1.Indexers
+namespace Speakarr.Api.V1.Indexers
 {
     public class IndexerBulkResource : ProviderBulkResource<IndexerBulkResource>
     {

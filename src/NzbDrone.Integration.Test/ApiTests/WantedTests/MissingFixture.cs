@@ -2,7 +2,7 @@ using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
 using NzbDrone.Core.Books;
-using Readarr.Api.V1.RootFolders;
+using Speakarr.Api.V1.RootFolders;
 
 namespace NzbDrone.Integration.Test.ApiTests.WantedTests
 {

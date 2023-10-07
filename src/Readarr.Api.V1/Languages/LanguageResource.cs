@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
-using Readarr.Http.REST;
+using Speakarr.Http.REST;
 
-namespace Readarr.Api.V1.Languages
+namespace Speakarr.Api.V1.Languages
 {
     public class LanguageResource : RestResource
     {
